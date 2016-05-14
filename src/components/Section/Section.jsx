@@ -1,6 +1,6 @@
 var React = require('react');
 
-var AboutSection = React.createClass({
+var Section = React.createClass({
   render: function(){
     return (
       <div>
@@ -11,4 +11,4 @@ var AboutSection = React.createClass({
   }
 });
 
-module.exports = AboutSection
+module.exports = Section

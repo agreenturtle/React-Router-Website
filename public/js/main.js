@@ -25043,7 +25043,7 @@ module.exports = NavbarItem;
 
 },{"react":245,"react-router":49}],253:[function(require,module,exports){
 var React = require('react');
-var AboutSection = require('./AboutSection.jsx');
+var Section = require('../../Section/Section.jsx');
 var LeadCapture = require('../../LeadCapture/LeadCapture.jsx');
 
 var About = React.createClass({
@@ -25056,13 +25056,13 @@ var About = React.createClass({
       React.createElement(
         'div',
         { className: 'left-panel' },
-        React.createElement(AboutSection, { title: 'What is Lorem Ipsum?', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.' }),
-        React.createElement(AboutSection, { title: 'Where does it come from?', text: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.' })
+        React.createElement(Section, { title: 'What is Lorem Ipsum?', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.' }),
+        React.createElement(Section, { title: 'Where does it come from?', text: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.' })
       ),
       React.createElement(
         'div',
         { className: 'right-panel' },
-        React.createElement(AboutSection, { title: 'Contact Me', text: '' }),
+        React.createElement(Section, { title: 'Contact Me', text: '' }),
         React.createElement(LeadCapture, { size: 'col-sm-12' })
       )
     );
@@ -25071,11 +25071,152 @@ var About = React.createClass({
 
 module.exports = About;
 
-},{"../../LeadCapture/LeadCapture.jsx":248,"./AboutSection.jsx":254,"react":245}],254:[function(require,module,exports){
+},{"../../LeadCapture/LeadCapture.jsx":248,"../../Section/Section.jsx":258,"react":245}],254:[function(require,module,exports){
+var React = require('react');
+var LeadCapture = require('../../LeadCapture/LeadCapture.jsx');
+
+var Contact = React.createClass({
+  displayName: 'Contact',
+
+  render: function () {
+    return React.createElement(
+      'div',
+      null,
+      React.createElement(LeadCapture, { size: 'col-sm-6 col-sm-offset-3' })
+    );
+  }
+});
+
+module.exports = Contact;
+
+},{"../../LeadCapture/LeadCapture.jsx":248,"react":245}],255:[function(require,module,exports){
+var React = require('react');
+var Navbar = require('../../Navbar/Navbar.jsx');
+
+var Home = React.createClass({
+  displayName: 'Home',
+
+  render: function () {
+    return React.createElement(
+      'div',
+      null,
+      React.createElement(Navbar, null),
+      React.createElement(
+        'div',
+        { className: 'content-body' },
+        this.props.children
+      )
+    );
+  }
+});
+
+module.exports = Home;
+
+},{"../../Navbar/Navbar.jsx":251,"react":245}],256:[function(require,module,exports){
+var React = require('react');
+var Section = require('../../Section/section.jsx');
+var Index = React.createClass({
+  displayName: 'Index',
+
+  render: function () {
+    return React.createElement(
+      'div',
+      { className: 'container' },
+      React.createElement(Section, { title: 'Welcome to My Web Site', text: 'Per primis antiopam et. At erat labore eleifend eum. An mel meliore recusabo. Veri nominavi principes has ne, in nulla honestatis mei. Tation periculis voluptatum no sea, ut elit hendrerit assentior eos. Id commune detracto mea.' })
+    );
+  }
+});
+
+module.exports = Index;
+
+},{"../../Section/section.jsx":259,"react":245}],257:[function(require,module,exports){
+var React = require('react');
+var Section = require('../../Section/Section.jsx');
+var LeadCapture = require('../../LeadCapture/LeadCapture.jsx');
+
+var Resume = React.createClass({
+  displayName: 'Resume',
+
+  render: function () {
+    var bottomRightStyle = {
+      'margin-top': '10px'
+    };
+    return React.createElement(
+      'div',
+      null,
+      React.createElement(
+        'div',
+        { className: 'left-panel' },
+        React.createElement(
+          'h3',
+          null,
+          ' Experience '
+        ),
+        React.createElement(
+          'ul',
+          null,
+          React.createElement(
+            'li',
+            null,
+            React.createElement(Section, { title: 'Position, Company 1', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' })
+          ),
+          React.createElement(
+            'li',
+            null,
+            React.createElement(Section, { title: 'Position, Company 2', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' })
+          ),
+          React.createElement(
+            'li',
+            null,
+            React.createElement(Section, { title: 'Position, Company 3', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' })
+          )
+        ),
+        React.createElement(
+          'h3',
+          null,
+          ' Education '
+        ),
+        React.createElement(
+          'ul',
+          null,
+          React.createElement(
+            'li',
+            null,
+            React.createElement(Section, { title: 'Major Degree, College, Year', text: ' Ego vero isti, inquam, permitto. Duo Reges: constructio interrete. Huius, Lyco, oratione locuples, rebus ipsis ielunior.' })
+          )
+        )
+      ),
+      React.createElement(
+        'div',
+        { className: 'right-panel' },
+        React.createElement(
+          'p',
+          { className: 'highlight' },
+          'Quid turpius quam sapientis vitam ex insipientium sermone pendere? Philosophi autem in suis lectulis plerumque moriuntur. Nunc omni virtuti vitium contrario nomine opponitur. Beatus sibi videtur esse moriens. Habent enim et bene longam et satis litigiosam disputationem. '
+        ),
+        React.createElement(
+          'a',
+          { className: 'link', href: '/pdf/JamesChen_Resume.pdf', target: '_blank' },
+          ' Download Resume --> '
+        )
+      ),
+      React.createElement(
+        'div',
+        { className: 'right-panel', style: bottomRightStyle },
+        React.createElement(Section, { title: 'Contact Me', text: '' }),
+        React.createElement(LeadCapture, { size: 'col-sm-12' })
+      )
+    );
+  }
+});
+
+module.exports = Resume;
+
+},{"../../LeadCapture/LeadCapture.jsx":248,"../../Section/Section.jsx":258,"react":245}],258:[function(require,module,exports){
 var React = require('react');
 
-var AboutSection = React.createClass({
-  displayName: "AboutSection",
+var Section = React.createClass({
+  displayName: "Section",
 
   render: function () {
     return React.createElement(
@@ -25099,87 +25240,51 @@ var AboutSection = React.createClass({
   }
 });
 
-module.exports = AboutSection;
+module.exports = Section;
 
-},{"react":245}],255:[function(require,module,exports){
-var React = require('react');
-var LeadCapture = require('../../LeadCapture/LeadCapture.jsx');
-
-var Contact = React.createClass({
-  displayName: 'Contact',
-
-  render: function () {
-    return React.createElement(
-      'div',
-      null,
-      React.createElement(LeadCapture, { size: 'col-sm-6 col-sm-offset-3' })
-    );
-  }
-});
-
-module.exports = Contact;
-
-},{"../../LeadCapture/LeadCapture.jsx":248,"react":245}],256:[function(require,module,exports){
-var React = require('react');
-var Navbar = require('../../Navbar/Navbar.jsx');
-
-var Home = React.createClass({
-  displayName: 'Home',
-
-  render: function () {
-    return React.createElement(
-      'div',
-      null,
-      React.createElement(Navbar, null),
-      React.createElement(
-        'div',
-        { className: 'content-body' },
-        this.props.children
-      )
-    );
-  }
-});
-
-module.exports = Home;
-
-},{"../../Navbar/Navbar.jsx":251,"react":245}],257:[function(require,module,exports){
+},{"react":245}],259:[function(require,module,exports){
 var React = require('react');
 
-var Resume = React.createClass({
-  displayName: "Resume",
+var Section = React.createClass({
+  displayName: "Section",
 
   render: function () {
     return React.createElement(
       "div",
       null,
       React.createElement(
-        "h1",
-        null,
-        " Resume "
+        "h4",
+        { className: "section-title" },
+        " ",
+        this.props.title,
+        " "
       ),
       React.createElement(
-        "a",
-        { href: "/pdf/JamesChen_Resume.pdf", target: "_blank" },
-        "Download"
+        "p",
+        null,
+        " ",
+        this.props.text,
+        " "
       )
     );
   }
 });
 
-module.exports = Resume;
+module.exports = Section;
 
-},{"react":245}],258:[function(require,module,exports){
+},{"react":245}],260:[function(require,module,exports){
 var React = require('react');
 var ReactDOM = require('react-dom');
 var Routes = require('./routes.jsx');
 
 ReactDOM.render(Routes, document.getElementById('app'));
 
-},{"./routes.jsx":259,"react":245,"react-dom":19}],259:[function(require,module,exports){
+},{"./routes.jsx":261,"react":245,"react-dom":19}],261:[function(require,module,exports){
 var React = require('react');
 var ReactRouter = require('react-router');
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
+var IndexRoute = ReactRouter.IndexRoute;
 
 var CreateHistory = require('history/lib/createHashHistory');
 
@@ -25188,6 +25293,7 @@ var History = new CreateHistory({
 });
 
 var Home = require('./components/Pages/Home/HomePage.jsx');
+var Index = require('./components/Pages/Index/IndexPage.jsx');
 var About = require('./components/Pages/About/AboutPage.jsx');
 var Resume = require('./components/Pages/Resume/ResumePage.jsx');
 var Contact = require('./components/Pages/Contact/ContactPage.jsx');
@@ -25198,6 +25304,7 @@ var Routes = React.createElement(
   React.createElement(
     Route,
     { path: '/', component: Home },
+    React.createElement(IndexRoute, { component: Index }),
     React.createElement(Route, { path: '/about', component: About }),
     React.createElement(Route, { path: '/resume', component: Resume }),
     React.createElement(Route, { path: '/contact', component: Contact })
@@ -25206,4 +25313,4 @@ var Routes = React.createElement(
 
 module.exports = Routes;
 
-},{"./components/Pages/About/AboutPage.jsx":253,"./components/Pages/Contact/ContactPage.jsx":255,"./components/Pages/Home/HomePage.jsx":256,"./components/Pages/Resume/ResumePage.jsx":257,"history/lib/createHashHistory":9,"react":245,"react-router":49}]},{},[258]);
+},{"./components/Pages/About/AboutPage.jsx":253,"./components/Pages/Contact/ContactPage.jsx":254,"./components/Pages/Home/HomePage.jsx":255,"./components/Pages/Index/IndexPage.jsx":256,"./components/Pages/Resume/ResumePage.jsx":257,"history/lib/createHashHistory":9,"react":245,"react-router":49}]},{},[260]);

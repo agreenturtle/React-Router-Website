@@ -27,12 +27,23 @@ header {
   top: -9px;
 }
 
+.highlight {
+  color: #4169e1
+}
+
 .left-panel {
   background-color: #E1E1E1;
   float:left;
   padding:10px;
   margin-left: 15px;
   width: 60%;
+}
+
+.link, .link:hover, .link:active {
+  text-decoration: none;
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing: 1px;
 }
 
 .navbar-item {

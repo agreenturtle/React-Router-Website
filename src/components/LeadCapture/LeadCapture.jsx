@@ -2,16 +2,18 @@ var React = require('react');
 var NameField = require('./NameField.jsx');
 var EmailField = require('./EmailField.jsx');
 var MessageField = require('./MessageField.jsx');
+var HTTP = require('../../../services/http.js');
 
 var LeadCapture = React.createClass({
   onSubmit: function(e){
     if(this.refs.emailField.state.valid && this.refs.nameField.state.valid){
-      var myMessage = {
+      var httpObj = {
         name: this.refs.nameField.state.value,
         email: this.refs.emailField.state.value,
         message: this.refs.messageField.state.value
-      };
-      console.log("Submited: ", myMessage);
+      }
+      HTTP.sendPostRequest(httpObj);
+
       this.refs.nameField.clear();
       this.refs.emailField.clear();
       this.refs.messageField.clear();

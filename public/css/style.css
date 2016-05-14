@@ -54,7 +54,7 @@ header {
   top: -11px;
 }
 
-.navbar-item:hover {
+.navbar-item:hover{
   background-color: #00bfff;
   text-decoration:none;
 }
@@ -63,7 +63,7 @@ header {
   float:right;
 }
 
-.navbar-item-text, .navbar-item-text:hover,  .navbar-item-text:active{
+.navbar-item-text, .navbar-item-text:hover,  .navbar-item-text:active, .navbar-item .navbar-item-text{
   color:white;
   text-decoration: none;
   text-transform: uppercase;
